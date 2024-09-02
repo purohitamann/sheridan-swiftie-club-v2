@@ -1,13 +1,20 @@
 import React from 'react'
 import LinkButton from './LinkButton'
-import EmailButton from './EmailButton'
+import { useState } from 'react'
 const LinkComponent = () => {
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+    if (typeof window !== 'undefined') {
+        const isSmallScreen = window.innerWidth < 768;
+        setIsSmallScreen(isSmallScreen);
+    }
+
     return (
-        <div className='flex gap-2'>
+        <div className={isSmallScreen ? 'flex-col  justify-center align-center items-center ' : 'flex  justify-center align-center items-center '}>
 
             <LinkButton LinkLabel="Instagram" LinkUrl="https://www.instagram.com/sheridanswiftieclub/" />
             <LinkButton LinkLabel="Clubs Corner" LinkUrl="https://sheridancollege.campuslabs.ca/engage/organization/sheridanswiftieclub" />
-            <EmailButton />
+            <LinkButton LinkLabel="Mail" LinkUrl="mailto:sheridanswiftieclub@gmail.com" />
+
 
         </div>
     )
