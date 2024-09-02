@@ -7,12 +7,11 @@ type Props = {
 }
 export default function LinkComponent(Props: Props) {
     return (
-        <div>
 
-            <Button asChild>
-                <Link href={Props.LinkUrl}>{Props.LinkLabel}</Link>
-            </Button>
+        <div className='flex justify-center align-center items-center p-2 text-center'>
+            <a style={{ fontFamily: "Cinzel" }} className='text-[#E4E2DD] text-2xl' href={Props.LinkUrl}>{Props.LinkLabel}</a>
         </div>
+
     )
 }
 
