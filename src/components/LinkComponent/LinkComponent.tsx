@@ -1,16 +1,12 @@
 import React from 'react'
 import LinkButton from './LinkButton'
-
+import { useState } from 'react'
 const LinkComponent = () => {
-
-
-    const isSmallScreen = window.innerWidth < 768;
-
-
-
-
-
-
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+    if (typeof window !== 'undefined') {
+        const isSmallScreen = window.innerWidth < 768;
+        setIsSmallScreen(isSmallScreen);
+    }
 
     return (
         <div className={isSmallScreen ? 'flex-col  justify-center align-center items-center ' : 'flex  justify-center align-center items-center '}>
