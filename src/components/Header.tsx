@@ -21,7 +21,7 @@ const Header: React.FC = () => {
     }, []);
 
     return (
-        <div className="flex-col gap-2">
+        <div className="flex-col">
             <div>
                 <h1
                     style={{ fontFamily: "Cinzel", color: "#E4E2DD" }}

@@ -77,7 +77,18 @@
     --chart-5: 340 75% 55%;
   }
 }
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
+}
 
+main {
+  max-width: 100vw; /* Ensure the main content doesn’t exceed the viewport width */
+  overflow-x: hidden; /* Prevent any overflow within the main content */
+}
 @layer base {
   * {
     @apply border-border;
