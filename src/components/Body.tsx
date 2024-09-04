@@ -3,7 +3,7 @@ import LinkComponent from '../components/LinkComponent/LinkComponent';
 
 const Body: React.FC = () => {
     return (
-        <section className="flex flex-col justify-start items-center p-10  w-full h-full">
+        <section className="flex flex-col justify-start items-center p-10 w-full h-full">
             <div className="flex flex-col justify-start items-center p-10 ">
                 <div
                     style={{ fontFamily: 'Cinzel', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
@@ -14,7 +14,7 @@ const Body: React.FC = () => {
                         <strong>the Sheridan Swiftie Club</strong>
                     </p>
                     <p>
-                        We’re your go-to at Sheridan for all things <i> Taylor Swift!</i> If you’d like to learn more about the club, head to
+                        We&#39;re your go-to at Sheridan for all things <i> Taylor Swift!</i> If you&#39;d like to learn more about the club, head to
                         Clubs Corner and search for us!
                     </p>
                 </div>
