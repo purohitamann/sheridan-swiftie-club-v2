@@ -19,6 +19,7 @@ html,
     url("/noise-01.jpeg");
   background-size: cover; /* Ensures both the gradient and texture fill the screen */
   background-blend-mode: multiply; /* Blends the texture with the gradient */
+  background-repeat: repeat-x;
 }
 
 /* Optional: Centered content styling */

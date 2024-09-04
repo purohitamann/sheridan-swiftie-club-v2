@@ -7,11 +7,11 @@ type Props = {
 }
 export default function LinkComponent(Props: Props) {
     return (
-        <div>
+        <div className=' hover:bg-destructive-foreground hover:text-accent-foreground'>
 
-            <Button asChild>
-                <Link href={Props.LinkUrl}>{Props.LinkLabel}</Link>
-            </Button>
+
+            <Link href={Props.LinkUrl}>{Props.LinkLabel}</Link>
+
         </div>
     )
 }
