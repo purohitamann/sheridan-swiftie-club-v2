@@ -44,7 +44,8 @@ const Header: React.FC = () => {
                     numberOfPieces={200}
                     recycle={true}
                     colors={customColors}
-                    gravity={0.1}
+                    gravity={0.02}
+                    wind={0.01}
                     opacity={0.8}
                     drawShape={(ctx) => {
                         ctx.beginPath();
