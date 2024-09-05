@@ -1,29 +1,29 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Confetti from 'react-confetti';
-import { useState } from 'react';
 
 const Header: React.FC = () => {
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const customColors = ['#000000', '#FFFFFF', '#808080', '#E4E2DD'];
     const [isConfettiVisible, setConfettiVisible] = useState(false);
+    const [hasPlayedAudio, setHasPlayedAudio] = useState(false);
 
     const playAudio = () => {
-        if (audioRef.current) {
-            setConfettiVisible(true);
+        if (audioRef.current && !hasPlayedAudio) {
             audioRef.current.volume = 0.5;
             audioRef.current.play();
+            setConfettiVisible(true);
+            setHasPlayedAudio(true); // Mark audio as played
         }
     };
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
+        if (typeof window !== 'undefined' && !hasPlayedAudio) {
             audioRef.current = new Audio('/so-high-school-intro.mp3');
             playAudio();
         }
-        setTimeout(() => {
-            setConfettiVisible(false);
-        });
-    }, []);
+
+
+    }, [hasPlayedAudio]);
 
     return (
         <div className="flex flex-col justify-center items-center h-[100vh] text-center p-20 ">
@@ -33,6 +33,8 @@ const Header: React.FC = () => {
                 className="text-6xl sm:text-xl md:text-xl font-light"
                 onMouseEnter={playAudio}
                 onClick={playAudio}
+                onTouchMoveCapture={playAudio}
+                onTouchStartCapture={playAudio}
             >
                 Sheridan Swiftie Club
             </h1>
