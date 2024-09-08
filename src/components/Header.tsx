@@ -9,10 +9,11 @@ const Header: React.FC = () => {
 
     const playAudio = () => {
         if (audioRef.current && !hasPlayedAudio) {
-            // audioRef.current.volume = 0.5;
+            audioRef.current.volume = 0.5;
             audioRef.current.play();
             setConfettiVisible(true);
             setHasPlayedAudio(true); // Mark audio as played
+
         }
     };
 
@@ -20,6 +21,7 @@ const Header: React.FC = () => {
         if (typeof window !== 'undefined' && !hasPlayedAudio) {
             audioRef.current = new Audio('/so-high-school-intro.mp3');
             playAudio();
+
         }
 
 
