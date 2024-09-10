@@ -9,10 +9,10 @@ const Header: React.FC = () => {
 
     const playAudio = () => {
         if (audioRef.current && !hasPlayedAudio) {
-            audioRef.current.volume = 0.5;
+            audioRef.current.volume = 0.8;
             audioRef.current.play();
             setConfettiVisible(true);
-            setHasPlayedAudio(true); // Mark audio as played
+            // setHasPlayedAudio(true); // Mark audio as played
 
         }
     };
@@ -24,7 +24,6 @@ const Header: React.FC = () => {
 
         }
 
-
     }, [hasPlayedAudio]);
 
     return (
@@ -35,8 +34,9 @@ const Header: React.FC = () => {
                 className="text-6xl sm:text-xl md:text-xl font-light"
                 onMouseEnter={playAudio}
                 onClick={playAudio}
-                onTouchMoveCapture={playAudio}
-                onTouchStartCapture={playAudio}
+                onMouseLeave={playAudio}
+                onTouchMove={playAudio}
+
             >
                 Sheridan Swiftie Club
             </h1>
@@ -48,8 +48,8 @@ const Header: React.FC = () => {
                     numberOfPieces={200}
                     recycle={true}
                     colors={customColors}
-                    gravity={0.02}
-                    wind={0.01}
+                    gravity={0.01}
+                    wind={0.004}
                     opacity={0.8}
                     drawShape={(ctx) => {
                         ctx.beginPath();
