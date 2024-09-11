@@ -32,7 +32,6 @@ const Body: React.FC = () => {
                     <LinkComponent />
                 </div>
 
-                {/* Footer */}
                 <Footer />
 
             </div>

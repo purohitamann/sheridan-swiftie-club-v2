@@ -3,8 +3,8 @@ import React from 'react'
 import WinterExec from '/winter.svg'
 import "./executive.css";
 import "../globals.css";
-import Banner from '@/components/Banner'
-import Profile from '@/components/Profile'
+import Banner from '../../components/Banner'
+import Profile from '../../components/Profile'
 function exec() {
     return (
         <section className='flex-col' >
