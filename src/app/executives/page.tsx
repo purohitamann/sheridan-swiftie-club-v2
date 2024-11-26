@@ -15,7 +15,7 @@ function exec() {
             <div className="flex pt-5">
                 <Banner title='SSC Executives 2024-25' subtitle='Meet your Executive Team' >
                     <div className="flex flex-col justify-center items-center align-center  text-[#E4E2DD] w-full h-full rounded">
-                        <h1>Coming Soon!</h1>
+                        <h1>Coming Soon!  Test Edit</h1>
                     </div>
                 </Banner>
             </div>
